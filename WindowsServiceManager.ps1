@@ -19,14 +19,14 @@
     Shortcuts: F5 = refresh, Ctrl+F = search, Esc = cancel the running operation / clear the search.
 
 .NOTES
-    Version 1.0.0.
+    Version 1.0.1.
     Requires Windows PowerShell 5.1 (installed with Windows).
     Run: powershell.exe -File .\WindowsServiceManager.ps1  (or right-click > Run with PowerShell)
     The script restarts itself elevated (UAC) and in STA mode when needed.
     The console window stays open - useful for diagnostics.
 #>
 
-$script:AppVersion = '1.0.0'
+$script:AppVersion = '1.0.1'
 
 # =====================================================================================
 # 1. Administrator + STA (WPF requires STA, changing services requires elevation)
@@ -503,7 +503,7 @@ $script:MainBody = @'
         <ColumnDefinition Width="Auto"/>
       </Grid.ColumnDefinitions>
 
-      <Border Style="{StaticResource SearchBorder}" Height="36">
+      <Border Style="{StaticResource SearchBorder}" Height="40">
         <Grid>
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40"/>
@@ -517,7 +517,7 @@ $script:MainBody = @'
         </Grid>
       </Border>
 
-      <Border Grid.Column="1" Margin="12,0,0,0" Height="36" Padding="3" Background="{StaticResource Surface2Brush}" BorderBrush="{StaticResource LineBrush}" BorderThickness="1" CornerRadius="8">
+      <Border Grid.Column="1" Margin="12,0,0,0" Height="40" Padding="3" Background="{StaticResource Surface2Brush}" BorderBrush="{StaticResource LineBrush}" BorderThickness="1" CornerRadius="8">
         <StackPanel Orientation="Horizontal">
           <RadioButton x:Name="FilterAll" Style="{StaticResource SegRadio}" GroupName="flt" IsChecked="True" Content="All" Padding="12,0"/>
           <RadioButton x:Name="FilterRunning" Style="{StaticResource SegRadio}" GroupName="flt" Content="Running"/>
@@ -525,7 +525,7 @@ $script:MainBody = @'
         </StackPanel>
       </Border>
 
-      <Button x:Name="BtnRefresh" Grid.Column="2" Style="{StaticResource DarkBtn}" Height="36" Margin="12,0,0,0" ToolTip="Refresh the list (F5)">
+      <Button x:Name="BtnRefresh" Grid.Column="2" Style="{StaticResource DarkBtn}" Height="40" Margin="12,0,0,0" ToolTip="Refresh the list (F5)">
         <StackPanel Orientation="Horizontal">
           <TextBlock Text="&#xE895;" FontFamily="Segoe MDL2 Assets" FontSize="13" VerticalAlignment="Center" Margin="0,0,8,0"/>
           <TextBlock Text="Refresh"/>

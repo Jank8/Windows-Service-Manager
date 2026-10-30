@@ -1,6 +1,6 @@
 # Windows Service Manager
 
-**Version 1.0.0**
+**Version 1.0.1**
 
 A single-file Windows service manager with a WPF (dark theme) GUI, written in PowerShell.
 It lists the services of the local machine and lets you start, stop, restart and change their
